@@ -1,0 +1,10 @@
+# Never commit secrets or credentials
+*.credentials.json
+.credentials.json
+.env
+.env.*
+
+# Editor / OS cruft
+*.swp
+*~
+.DS_Store

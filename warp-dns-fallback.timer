@@ -1,0 +1,12 @@
+[Unit]
+Description=Periodically check WARP DNS and manage resolv.conf fallback
+
+[Timer]
+# First run 30s after boot, then every 20s. A short cadence so DNS recovers
+# quickly after a WARP crash without hammering the resolver.
+OnBootSec=30s
+OnUnitActiveSec=20s
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

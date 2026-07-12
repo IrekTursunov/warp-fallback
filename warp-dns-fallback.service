@@ -1,0 +1,8 @@
+[Unit]
+Description=Add public DNS fallback to resolv.conf while Cloudflare WARP DNS is down
+Documentation=file:///usr/local/sbin/warp-dns-fallback.sh
+After=warp-svc.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/warp-dns-fallback.sh
